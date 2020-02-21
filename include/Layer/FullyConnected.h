@@ -142,6 +142,12 @@ class FullyConnected: public Layer
             std::copy(param.begin() + m_weight.size(), param.end(), m_bias.data());
         }
 
+        int set_parameters(const Scalar* param){
+            for(int i=0;i<m_weight.size();i++) m_weight.data()[i] = param[i];
+            for(int i=0;i<m_bias.size();i++) m_bias.data()[i] = param[i+m_weight.size()];
+            return m_weight.size() + m_bias.size();
+        }
+
         std::vector<Scalar> get_derivatives() const
         {
             std::vector<Scalar> res(m_dw.size() + m_db.size());

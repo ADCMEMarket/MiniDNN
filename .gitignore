@@ -7,3 +7,4 @@ Release/*
 *.orig
 example/build*
 settings.json
+example/*.txt

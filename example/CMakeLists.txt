@@ -6,3 +6,4 @@ include_directories(../include)
 include_directories(../../../.julia/conda/3/Lib/Libraries/eigen3)
 
 add_executable(main main.cpp)
+add_executable(main2 main2.cpp)
