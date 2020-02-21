@@ -29,7 +29,7 @@ namespace MiniDNN
 ///
 class Network
 {
-    private:
+    public:
         typedef Eigen::Matrix<Scalar, Eigen::Dynamic, Eigen::Dynamic> Matrix;
         typedef Eigen::RowVectorXi IntegerVector;
 
@@ -345,6 +345,11 @@ class Network
             }
 
             return res;
+        }
+
+        Matrix get_sensitivity() const 
+        {
+            return m_layers[0]->backprop_data();
         }
 
         ///
