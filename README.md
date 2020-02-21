@@ -1,5 +1,7 @@
 # MiniDNN
 
+⚠️ This forked repository is used as a small embedded neural network for ADCME custom operators. See `example` directory for usage. 
+
 **MiniDNN** is a C++ library that implements a number of popular
 deep neural network (DNN) models. It has a mini codebase but is fully functional
 to construct different types of feed-forward neural networks. **MiniDNN** is
